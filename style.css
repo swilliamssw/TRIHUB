@@ -71,13 +71,12 @@ h2 {
     transform: scale(1.10);
 }
 
-/* Loader styling (Based on youtube video & w3school)*/
+/* Loader styling (Based on youtube video in README.MD & loader lession from w3school)*/
 
 #loading {
     position: absolute;
     height: 0rem;
-    top: 35rem;
-    left: 22rem;
+    top: 33.4rem;
     display: flex;
     align-items: center;
     transform: translate(-50%, -50%);

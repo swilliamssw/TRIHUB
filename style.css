@@ -76,7 +76,6 @@ h2 {
 #loading {
     position: absolute;
     height: 0rem;
-    top: 33.4rem;
     display: flex;
     align-items: center;
     transform: translate(-50%, -50%);

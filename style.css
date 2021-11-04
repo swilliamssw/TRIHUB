@@ -71,20 +71,20 @@ h2 {
     transform: scale(1.10);
 }
 
-/* Loader styling (Based on )*/
+/* Loader styling (Based on youtube video & w3school)*/
 
 #loading {
     position: absolute;
-    height: 5rem;
-    top: 5rem;
-    left: 5rem;
+    height: 0rem;
+    top: 35rem;
+    left: 22rem;
     display: flex;
     align-items: center;
     transform: translate(-50%, -50%);
 }
 
 .bars {
-    height: 5rem;
+    height: 6rem;
     width: 0.7rem;
     margin: 0 0.4rem;
     border-radius: 1rem;

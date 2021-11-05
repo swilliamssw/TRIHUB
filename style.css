@@ -151,13 +151,14 @@ h1 .fa-crown {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    height: 0;
 }
 
 .social-icons .fa-brands {
     color: aliceblue;
     font-size: 4rem;
     position: relative;
-    padding: 1rem;
+    padding: 0rem 1rem;
     bottom: 10rem;
+    cursor: pointer;
 }

@@ -67,8 +67,22 @@ h2 {
 .btn:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgb(3, 248, 248);
-    transition: transform 180ms;
-    transform: scale(1.10);
+    transition: transform 160ms;
+    transform: scale(1.11);
+}
+
+/* Styling For Font Awesome Icon (Crown) */
+.fa-crown {
+    background: rgb(169, 173, 177);
+    font-size: 2.5rem;
+    margin-left: 0.5rem;
+}
+
+/* For High Score Page Large Font Awesome Icon (Crown) */
+h1 .fa-crown {
+    background: rgb(72, 175, 175);
+    font-size: 5rem;
+    margin-left: 0.5rem;
 }
 
 /* Loader styling (Based on youtube video in README.MD & loader lession from w3school)*/
@@ -132,26 +146,18 @@ h2 {
     }
 }
 
+/* Social Media Links */
 .social-icons {
-    font-size: 2.4rem;
-    padding: 2rem 0;
-    width: 30rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 1rem;
-    text-decoration: none;
+}
+
+.social-icons .fa-brands {
     color: aliceblue;
-
-}
-
-.fa-crown {
-    background: rgb(169, 173, 177);
-    font-size: 2.5rem;
-    margin-left: 0.5rem;
-}
-
-/*For High Score page */
-h1 .fa-crown {
-    background: rgb(72, 175, 175);
-    font-size: 5rem;
-    margin-left: 0.5rem;
+    font-size: 4rem;
+    position: relative;
+    padding: 1rem;
+    bottom: 10rem;
 }

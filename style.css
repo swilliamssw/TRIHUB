@@ -183,7 +183,7 @@ h1 .fa-crown {
 
 .choice-container {
     display: flex;
-    width: 60%;
+    width: 60rem;
     font-size: 1.5rem;
     border: 0.7rem solid rgb(169, 173, 177);
     border-radius: 2.0rem;

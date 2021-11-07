@@ -9,7 +9,6 @@
 
 h1 {
     color: aliceblue;
-    margin-bottom: 5rem;
     font-size: 5.4rem;
 }
 
@@ -227,7 +226,7 @@ h1 .fa-crown {
     justify-content: space-between;
     width: 100%;
     min-width: 10rem;
-    height: 11rem;
+    height: 8rem;
 }
 
 .hud-prefix {

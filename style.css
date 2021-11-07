@@ -162,19 +162,24 @@ h1 .fa-crown {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 0;
+    height: 15rem;
 }
 
 .social-icons .fa-brands {
     color: aliceblue;
     font-size: 4rem;
-    padding: 0rem 1rem;
+    padding: 0em 1rem;
     bottom: 10rem;
     cursor: pointer;
 }
 
 
 /* Quiz-selection Page Styling */
+
+#question {
+    text-align: center;
+    font-size: 4.3rem;
+}
 
 .choice-container {
     display: flex;
@@ -183,7 +188,7 @@ h1 .fa-crown {
     border: 0.7rem solid slategray;
     border-radius: 2.0rem;
     background: slategray;
-    margin-bottom: 2.0rem;
+    margin-bottom: 3.0rem;
 }
 
 .choice-container:hover {
@@ -194,16 +199,19 @@ h1 .fa-crown {
 }
 
 .choice-prefix {
-    background-color: slategray;
+    background-color: rgb(72, 175, 175);
     color: aliceblue;
-    top: 3rem;
+    font-size: 1.2rem;
+    border-radius: 2.5rem;
+    padding: 1rem;
 }
 
 .choice-text {
-    padding: 1rem;
+    padding: 0.5rem;
     background-color: slategray;
     color: aliceblue;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    width: 100vw;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-right: 4rem;
 }

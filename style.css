@@ -21,7 +21,7 @@ h2 {
 
 .container {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,7 +162,7 @@ h1 .fa-crown {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20rem;
+    height: 10rem;
 }
 
 .social-icons .fa-brands {
@@ -179,6 +179,7 @@ h1 .fa-crown {
 #question {
     text-align: center;
     font-size: 4.3rem;
+    margin: 1rem;
 }
 
 .choice-container {
@@ -226,6 +227,8 @@ h1 .fa-crown {
     justify-content: space-between;
     width: 100%;
     min-width: 10rem;
+    height: 11rem;
+    margin-top: 3rem;
 }
 
 .hud-prefix {

@@ -217,9 +217,13 @@ h1 .fa-crown {
     margin-right: 3.8rem;
 }
 
+
+/* Hud - Prgress bar & Score counter */
+
 #hud {
     display: flex;
     justify-content: space-between;
+    width: 60rem;
 }
 
 .hud-prefix {
@@ -251,5 +255,5 @@ h1 .fa-crown {
 #progressBarFull {
     height: 100%;
     background: rgb(3, 248, 248);
-    width: 0;
+    width: 0%;
 }

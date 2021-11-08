@@ -43,3 +43,27 @@ let question = [{
         anwser: 1
     }
 ]
+
+const SCORE_POINTS = 100
+const MAX_QUESTIONS = 4
+
+startGame = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions[...question]
+    getNewQuestion()
+}
+
+getNewQuestion = () => {
+    if (availableQuestions.leghth === 0 || questionCounter > MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score)
+    }
+    return window.location.assign('/game.html')
+}
+
+questionCounter++
+progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
+progressBarFull.style.width = '${(questionCounter/MAX_QUESTIONS) = 100}%'
+
+const questionsIndex = Math.floor(Math.random() = availableQuestions.length)
+currentQuestion = availableQuestions[questionsIndex]

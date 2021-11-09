@@ -14,35 +14,90 @@
 <!-- Header section with Logo & Social Icons-->
 
 <body>
-    <div class="container1">
-        <div id="home" class="flex-column flex-center">
-            <H1>TRIHUB</H1>
-            <a href="/quiz-selector.html" class="btn">GO!</a>
-            <a href="/highscores.html" id="highscores-btn" class="btn"> High Scores <i class="fas thin fa-crown"></i></a>
+    <section id="home" class="container flex-column flex-center hidden">
+        <H1>TRIHUB</H1>
+        <a href="#quiz-selector" class="btn">GO!</a>
+        <a href="#highscores" id="highscores-btn" class="btn"> High Scores <i class="fas thin fa-crown"></i></a>
+    </section>
+
+    <!-- Loading Bar -->
+
+    <div id="loading" class="container1 flex-column flex-center hidden">
+        <div class="bars"></div>
+        <div class="bars"></div>
+        <div class="bars"></div>
+        <div class="bars"></div>
+        <div class="bars"></div>
+        <div class="bars"></div>
+        <div class="bars"></div>
+        <div class="bars"></div>
+    </div>
+
+    <!-- High Score Pages -->
+
+    <section id="highscores" class="container flex-column flex-center hidden ">
+        <H1>High Scores <i class="fas thin fa-crown"></i></H1>
+        <a href="#home" class="btn">Home</a>
+    </section>
+
+    <!-- Quiz Selection -->
+
+    <section id="quiz-selector" class="container flex-column flex-center justify-center hidden ">
+        <H1>Choose Your Quiz</H1>
+        <a href="/index.html" class="btn">Play!</a>
+    </section>
+
+    <!-- Game Page -->
+    <section id="game" class="container-game flex-column flex-center  ">
+        <div id="hud">
+            <div class="hud-item">
+                <p id="progressText" class="hud-prefix">
+                    Question
+                </p>
+                <div id="progressBar">
+                    <div id="progressBarFull"></div>
+                </div>
+            </div>
+            <div class="hud-item">
+                <p class="hud-prefix">
+                    Score
+                </p>
+                <h1 class="hud-main-text" id="score">
+                    0
+                </h1>
+            </div>
         </div>
-        <div class="social-icons" class="container">
+        <div class="flex-center flex-column">
+            <h1 id="question">What is the anwser to this question?</h1>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1">Choice 1</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2">Choice 2</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3">Choice 3</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4">Choice 4</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Of Game Page -->
+
+    <!-- Social Media Icons -->
+    <footer class="container-smi flex-column flex-center">
+        <div class="social-icons">
             <a href="https://www.instagram.com/" target=”_blank”><i class="fa-brands fa-instagram"></i></a>
             <a href="https://discord.com/" target=”_blank”><i class="fa-brands fa-discord"></i></a>
             <a href="https://twitter.com/" target=”_blank”><i class="fa-brands fa-twitter"></i></a>
         </div>
-    </div>
-
-    <!-- Loading Bar-->
-
-    <div class="container">
-        <div class="loader" class="flex-column flex-center justify-center">
-            <div id="loading" class="hidden">
-                <div class="bars"></div>
-                <div class="bars"></div>
-                <div class="bars"></div>
-                <div class="bars"></div>
-                <div class="bars"></div>
-                <div class="bars"></div>
-                <div class="bars"></div>
-                <div class="bars"></div>
-            </div>
-        </div>
-    </div>
+    </footer>
 </body>
 
 </html>

@@ -1,10 +1,8 @@
-console.log("hello world from game!")
-
-const question = document.querySelector("question");
-const choices = Array.from(document.querySelectorAll("choice-text"));
+const question = document.getElementById("question");
+const choices = Array.from(document.querySelectorAll(".choice-text"));
 const progressText = (document.querySelector("#progressText"));
 const scoreText = (document.querySelector("#score"));
-const progressBarFull = (document.querySelector("progressBarFull"));
+const progressBarFull = (document.querySelector("#progressBarFull"));
 
 let currentQuestion = {}
 let acceptingAnwser = true

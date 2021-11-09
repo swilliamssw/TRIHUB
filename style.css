@@ -19,10 +19,6 @@ h2 {
     font-size: 5.4rem;
 }
 
-.container1 {
-    padding: 14rem;
-}
-
 .container {
     width: 100vw;
     height: 100%;
@@ -31,7 +27,24 @@ h2 {
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
-    padding: 4rem;
+    padding: 14rem;
+}
+
+.container-game {
+    margin: 0 auto;
+    height: 80vh;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    padding: 3rem;
+}
+
+.container-smi {
+    height: 10vh;
+    padding: 5rem;
 }
 
 .flex-column {

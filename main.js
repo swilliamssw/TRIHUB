@@ -1,4 +1,6 @@
-const question = document.querySelector("#question");
+console.log("hello world from game!")
+
+const question = document.querySelector("question");
 const choices = Array.from(document.querySelectorAll("choice-text"));
 const progressText = (document.querySelector("#progressText"));
 const scoreText = (document.querySelector("#score"));
@@ -50,9 +52,11 @@ const MAX_QUESTIONS = 4
 startGame = () => {
     questionCounter = 0
     score = 0
-    availableQuestions[...question]
+    availableQuestions;
     getNewQuestion()
 }
+
+/** Score Tracking  */
 
 getNewQuestion = () => {
     if (availableQuestions.leghth === 0 || questionCounter > MAX_QUESTIONS) {

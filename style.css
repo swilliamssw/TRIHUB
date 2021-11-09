@@ -10,12 +10,17 @@
 h1 {
     color: aliceblue;
     font-size: 5.4rem;
+    margin-bottom: 5rem;
 }
 
 h2 {
     color: aliceblue;
     margin-bottom: 5rem;
     font-size: 5.4rem;
+}
+
+.container1 {
+    padding: 14rem;
 }
 
 .container {
@@ -26,7 +31,7 @@ h2 {
     align-items: center;
     max-width: 80rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 4rem;
 }
 
 .flex-column {
@@ -226,7 +231,7 @@ h1 .fa-crown {
     justify-content: space-between;
     width: 100%;
     min-width: 10rem;
-    height: 8rem;
+    height: 10rem;
 }
 
 .hud-prefix {

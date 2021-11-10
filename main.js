@@ -6,7 +6,7 @@ const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loading");
 
 let currentQuestion = {};
-let acceptAnwser = true;
+let acceptAnwser = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
@@ -49,7 +49,7 @@ let questionM = [{
 
 //CONSTANTS
 const CORRECT_POINTS = 10; //POINTS AWARDED FOR EACH CORRECT ANSWER
-const MAX_QUESTIONS = 3; //MAX AMOUNT QUESTION PER QUIZ SECTION
+const MAX_QUESTIONS = 4; //MAX AMOUNT QUESTION PER QUIZ SECTION
 
 //START OF GAME
 startGame = () => {
@@ -66,22 +66,30 @@ getAQuestion = () => {
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestion.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
     currentQuestion = availableQuestion[questionIndex];
-    question.innerText = currentQuestion.availableQuestion;
+    question.innerText = currentQuestion.question;
 
+    //Grabs choices for the questions
     choices.forEach(choice => {
-        const number = choice.dataset["number"];
-        choice.innerText = currentQuestion["choice" + number];
+        const number = choice.dataset['number'];
+        choice.innerText = currentQuestion['choice' + number]; //uses choices and gets he correct choice out of the question
     });
 
-    availableQuestion.splice(questionIndex, 1);
+    availableQuestion.splice(questionIndex, 1); //Leaves out question that have been just used 
 
     acceptAnwser = true;
 };
-
+// Goes through each choice and 
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
-        console.log(e.target)
-    })
+        if (!acceptAnwser) returns;
+
+        acceptAnwser = false;
+        const selectedChoice = e.target;
+        const selectAnweser = selectedChoice.dataset['number'];
+        console.log(selectAnweser);
+        getAQuestion();
+    });
+
 });
 
 startGame();

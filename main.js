@@ -1,16 +1,19 @@
 const question = document.getElementById("question");
-const choices = Array.from(document.querySelector(".choice-text"));
-const progressText = (document.querySelector("#progressText"));
-const scoreText = (document.querySelector("#score"));
-const progressBarFull = (document.querySelector("#progressBarFull"));
+const choices = Array.from(document.getElementsByClassName("choice-text"));
+const progressText = document.getElementById("progressText");
+const scoreText = document.getElementById("score");
+const progressBarFull = document.getElementById("progressBarFull");
+const loader = document.getElementById("loading");
 
 let currentQuestion = {};
-let acceptingAnwser = true;
+let acceptAnwser = true;
 let score = 0;
 let questionCounter = 0;
-let availableQuestions = [];
+let availableQuestion = [];
 
-let question = [{
+
+
+let questionM = [{
         question: "what is the correct term?",
         choice1: "<script>",
         choice2: "<javascript>",
@@ -44,26 +47,41 @@ let question = [{
     }
 ];
 
-// CONSTANTS
+//CONSTANTS
 const CORRECT_POINTS = 10; //POINTS AWARDED FOR EACH CORRECT ANSWER
-const MAX_QUESTIONS = 10; // MAX AMOUNT QUESTION PER QUIZ SECTION
+const MAX_QUESTIONS = 3; //MAX AMOUNT QUESTION PER QUIZ SECTION
 
-// ARROW FUNCTION FOR START OF GAME
+//START OF GAME
 startGame = () => {
     questionCounter = 0;
     score = 0;
-    availableQuestions = [...question]; // SPREAD OPERATOR FOR THE ARRAY OF QUESTIONS
-    getNewQuestion();
-    // game.classlist.remove("hidden"); // Classlist set to remove hidden parts on loading
+    availableQuestion = [...questionM]; //SPREAD OPERATOR FOR THE ARRAY OF QUESTIONS
+    console.log(availableQuestion);
+    getAQuestion();
+    // game.classlist.remove("hidden"); //Classlist set to remove hidden parts on loading
 };
 
-// GRABS NEW AND RANDOM QUESTION FOR GAME 
-getNewQuestion = () => {
+//GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT 
+getAQuestion = () => {
     questionCounter++;
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+    const questionIndex = Math.floor(Math.random() * availableQuestion.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
+    currentQuestion = availableQuestion[questionIndex];
+    question.innerText = currentQuestion.availableQuestion;
 
+    choices.forEach(choice => {
+        const number = choice.dataset["number"];
+        choice.innerText = currentQuestion["choice" + number];
+    });
+
+    availableQuestion.splice(questionIndex, 1);
+
+    acceptAnwser = true;
 };
+
+choices.forEach(choice => {
+    choice.addEventListener("click", e => {
+        console.log(e.target)
+    })
+});
 
 startGame();

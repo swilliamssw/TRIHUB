@@ -1,25 +1,25 @@
 const question = document.getElementById("question");
-const choices = Array.from(document.querySelectorAll(".choice-text"));
+const choices = Array.from(document.querySelector(".choice-text"));
 const progressText = (document.querySelector("#progressText"));
 const scoreText = (document.querySelector("#score"));
 const progressBarFull = (document.querySelector("#progressBarFull"));
 
-let currentQuestion = {}
-let acceptingAnwser = true
-let score = 0
-let questionCounter = 0
-let availableQuestions = []
+let currentQuestion = {};
+let acceptingAnwser = true;
+let score = 0;
+let questionCounter = 0;
+let availableQuestions = [];
 
 let question = [{
-        question: "what is the anwser to this question?",
+        question: "what is the correct term?",
         choice1: "<script>",
         choice2: "<javascript>",
         choice3: "<js>",
         choice4: "<scripting>",
-        anwser: 1
+        anwser: 2
     },
     {
-        question: "what is the anwser to this question?",
+        question: "how does this work?",
         choice1: "<scriptfdngnfdgn>",
         choice2: "<javascriptndngdfhn>",
         choice3: "<jsdfbgndfnf>",
@@ -27,7 +27,7 @@ let question = [{
         anwser: 4
     },
     {
-        question: "what is the anwser to this question?",
+        question: "do you need help?",
         choice1: "<scriptngfdnbdgf>",
         choice2: "<javascripffdgnfdt>",
         choice3: "<jsfgnfgdn>",
@@ -35,38 +35,35 @@ let question = [{
         anwser: 3
     },
     {
-        question: "what is the anwser to this question?",
+        question: "what is your name?",
         choice1: "<scripfgndfgndt>",
         choice2: "<javascrfngfdnbgipt>",
         choice3: "<jsgfgnfd>",
         choice4: "<scriptifdngfdnng>",
         anwser: 1
     }
-]
+];
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+// CONSTANTS
+const CORRECT_POINTS = 10; //POINTS AWARDED FOR EACH CORRECT ANSWER
+const MAX_QUESTIONS = 10; // MAX AMOUNT QUESTION PER QUIZ SECTION
 
+// ARROW FUNCTION FOR START OF GAME
 startGame = () => {
-    questionCounter = 0
-    score = 0
-    availableQuestions[...question];
-    getNewQuestion()
-    game.classlist.remove("hidden");
-}
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...question]; // SPREAD OPERATOR FOR THE ARRAY OF QUESTIONS
+    getNewQuestion();
+    // game.classlist.remove("hidden"); // Classlist set to remove hidden parts on loading
+};
 
-/** Score Tracking  */
-
+// GRABS NEW AND RANDOM QUESTION FOR GAME 
 getNewQuestion = () => {
-    if (availableQuestions.leghth === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('mostRecentScore', score)
-    }
-    return window.location.assign('/game.html')
-}
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
 
-questionCounter++
-progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
-progressBarFull.style.width = '${(questionCounter/MAX_QUESTIONS) = 100}%'
+};
 
-const questionsIndex = Math.floor(Math.random() = availableQuestions.length)
-currentQuestion = availableQuestions[questionsIndex]
+startGame();

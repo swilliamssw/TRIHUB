@@ -239,7 +239,7 @@ h1 .fa-crown {
 #hud {
     display: flex;
     justify-content: space-between;
-    width: 55vw;
+    width: 70rem;
     height: 10rem;
 }
 

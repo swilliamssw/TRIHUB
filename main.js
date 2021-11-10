@@ -50,8 +50,9 @@ const MAX_QUESTIONS = 4
 startGame = () => {
     questionCounter = 0
     score = 0
-    availableQuestions;
+    availableQuestions[...question];
     getNewQuestion()
+    game.classlist.remove("hidden");
 }
 
 /** Score Tracking  */

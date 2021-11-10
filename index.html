@@ -11,26 +11,27 @@
     <title>TRIHUB</title>
 </head>
 
-<!-- Header section with Logo & Social Icons-->
+<!-- Header section with Logo & Social Icons -->
 
 <body>
-    <section id="home" class="container flex-column flex-center hidden">
+    <section id="home" class="container flex-column flex-center hidden ">
         <H1>TRIHUB</H1>
         <a href="#quiz-selector" class="btn">GO!</a>
         <a href="#highscores" id="highscores-btn" class="btn"> High Scores <i class="fas thin fa-crown"></i></a>
     </section>
 
     <!-- Loading Bar -->
-
-    <div id="loading" class="container1 flex-column flex-center hidden">
-        <div class="bars"></div>
-        <div class="bars"></div>
-        <div class="bars"></div>
-        <div class="bars"></div>
-        <div class="bars"></div>
-        <div class="bars"></div>
-        <div class="bars"></div>
-        <div class="bars"></div>
+    <div class=" continer-other flex-center flex-column hidden">
+        <div id="loading">
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+        </div>
     </div>
 
     <!-- High Score Pages -->
@@ -42,21 +43,20 @@
 
     <!-- Quiz Selection -->
 
-    <section id="quiz-selector" class="container flex-column flex-center justify-center hidden ">
+    <section id="quiz-selector" class="container flex-column flex-center justify-center hidden">
         <H1>Choose Your Quiz</H1>
-        <a href="/index.html" class="btn">Play!</a>
+        <a href="#game" class="btn">Play!</a>
     </section>
 
     <!-- Game Page -->
-    <section id="game" class="container-game flex-column flex-center  ">
+
+    <section id="game" class="container-game flex-column flex-center ">
         <div id="hud">
             <div class="hud-item">
                 <p id="progressText" class="hud-prefix">
                     Question
                 </p>
-                <div id="progressBar">
-                    <div id="progressBarFull"></div>
-                </div>
+                <div id="progressBar" id="progressBarFull"></div>
             </div>
             <div class="hud-item">
                 <p class="hud-prefix">
@@ -91,7 +91,7 @@
     <!-- End Of Game Page -->
 
     <!-- Social Media Icons -->
-    <footer class="container-smi flex-column flex-center">
+    <footer class="container-other flex-column flex-center">
         <div class="social-icons">
             <a href="https://www.instagram.com/" target=”_blank”><i class="fa-brands fa-instagram"></i></a>
             <a href="https://discord.com/" target=”_blank”><i class="fa-brands fa-discord"></i></a>

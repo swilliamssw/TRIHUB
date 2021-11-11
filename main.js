@@ -77,9 +77,18 @@ getAQuestion = () => {
     availableQuestion.splice(questionIndex, 1); //Leaves out question that have been just used 
 
     acceptAnwser = true;
+    if (availableQuestion.length === 0 || questionCounter > MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score)
+
+        return window.location.assign("/index.html");
+    }
 };
+
+
+
 // Goes through each choice and 
 choices.forEach(choice => {
+
     choice.addEventListener("click", e => {
         if (!acceptAnwser) returns;
 

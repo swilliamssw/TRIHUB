@@ -3,11 +3,12 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
-const scoreText = document.querySelector("#score");
+const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loading");
 const game = document.getElementById("game");
 const startBtn = docutment.getElementById("start-btn");
+const homeView = document.getElementById("home")
 
 
 let currentQuestion = {};

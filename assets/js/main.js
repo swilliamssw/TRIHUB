@@ -3,14 +3,14 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
-const scoreText = document.getElementById("score");
+const scoreText = document.querySelector("#score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loading");
 const game = document.getElementById("game");
 
 
 let currentQuestion = {};
-let acceptAnswer = false;
+let answerAccepted = false;
 let score = 0;
 let questionCounter = 0;
 let allQuestions = [];
@@ -47,10 +47,10 @@ let questionM = [{
         choice4: "<scriptifdngfdnng>",
         anwser: 1
     }
-]
+];
 
 //CONSTANTS
-const CORRECT_POINTS = 10; //POINTS AWARDED FOR EACH CORRECT ANSWER
+const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
 const MAX_QUESTIONS = 4; //MAX AMOUNT QUESTION PER QUIZ SECTION
 
 //START OF GAME
@@ -58,19 +58,18 @@ startGame = () => {
     questionCounter = 0;
     score = 0;
     allQuestions = [...questionM];
-    console.log(allQuestions);
     getAQuestion();
-    quiz.classList.remove("hidden"); //Classlist set to remove hidden parts on loading
 };
 
 //GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT IF NOT THEN ENDS THE GAME
 getAQuestion = () => {
     if (allQuestions.length == 0 || questionCounter > MAX_QUESTIONS) {
-        //goes to end of the game
+        localStorage.setItem('currentQuestion', score)
+            //goes to end of the game
         return window.location.assign('/end.html');
     }
     questionCounter++;
-    let questionIndex = Math.floor(Math.random() * allQuestions.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
+    const questionIndex = Math.floor(Math.random() * allQuestions.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
     currentQuestion = allQuestions[questionIndex];
     question.innerText = currentQuestion.question;
 
@@ -81,43 +80,37 @@ getAQuestion = () => {
     });
 
     allQuestions.splice(questionIndex, 1); //Leaves out question that have been just used 
-    console.log(allQuestions);
-    acceptAnswer = true;
 
-    progressText.innerText = `Question Number ${questionCounter} of ${MAX_QUESTIONS}`;
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) *100}%`;
-
-
+    answerAccepted = true;
 };
 
 // Goes through each choices
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
-        if (!acceptAnswer) return;
+        if (!answerAccepted) return;
 
-
-        acceptAnswer = false;
+        answerAccepted = false;
         const choiceSelected = e.target;
         const answerSelected = choiceSelected.dataset['number'];
-        console.log(answerSelected);
 
-
-        let classToApply = answerSelected == currentQuestion.answer ? 'right' : 'wrong';
-
-        if (classToApply === 'right') {
+        let classToApply = 'wrong';
+        if (answerSelected == choiceSelected.answer) {
+            classToApply = 'right'
+        }
+        if (answerSelected == 'right') {
             incrementScore(CORRECT_POINTS);
         }
+        console.log(answerSelected == currentQuestion.answer);
 
-        choiceSelected.parentElement.classList.add(classToApply);
-
-        setTimeout(() => {
-            choiceSelected.parentElement.classList.remove(classToApply);
-            getAQuestion();
-        });
-
-    });
-
+        progressText.innerText = `Question Number ${questionCounter} of ${MAX_QUESTIONS}`;
+        progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+        getAQuestion();
+    }, 400);
 
 });
 
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+};
 startGame();

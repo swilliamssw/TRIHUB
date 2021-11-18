@@ -15,7 +15,7 @@
 <!-- Header section with Logo & Social Icons -->
 
 <body>
-    <section id="home" class="container flex-column flex-center  ">
+    <section id="home" class="container-game flex-column flex-center ">
         <H1>TRIHUB</H1>
         <a href="#quiz-selector" class="btn">GO!</a>
         <a href="#highscores" id="highscores-btn" class="btn"> High Scores <i class="fas thin fa-crown"></i></a>
@@ -23,7 +23,7 @@
 
     <!-- Loading Bar -->
 
-    <div class=" continer-other flex-center flex-column  ">
+    <div class=" continer-game flex-center flex-column hidden">
         <div id="loading">
             <div class="bars"></div>
             <div class="bars"></div>
@@ -38,7 +38,7 @@
 
     <!-- High Score Pages -->
 
-    <section id="highscores" class="container flex-column flex-center ">
+    <section id="highscores" class="container-other flex-column flex-center hidden ">
         <H1>High Scores <i class="fas thin fa-crown"></i></H1>
         <a href="#home" class="btn">Home</a>
     </section>
@@ -48,28 +48,52 @@
     <section id="quiz-selector" class="container flex-column flex-center justify-center  ">
         <H1>Choose Your Quiz</H1>
         <a href="#game" class="btn">Play!</a>
+        <div class="rowQuizSelector">
+            <h3>Choose Topic</h3>
+            <select id="categoryList" claas="custom-select">
+            </select>
+            <div class="rowQuizSelector">
+                <h3>Choose Difficulty</h3>
+                <select id="difficultyChoice" claas="custom-select">
+                    <option id="easy">Easy</option>
+                    <option id="Medium">Medium</option>
+                    <option id="Hard">Hard</option>
+                </select>
+            </div>
+            <div class="rowQuizSelector">
+                <h3>Number Of Questions</h3>
+                <select id="questionSelection" claas="custom-select">
+                    <option id="10">10</option>
+                    <option id="15">15</option>
+                    <option id="20">20</option>
+                    <option id="25">25</option>
+                </select>
+            </div>
+        </div>
     </section>
 
     <!-- Game Page -->
 
-    <section id="game" class="container-game flex-column flex-center ">
-        <div id="hud">
+    <div id="game" class="container-game flex-column flex-center ">
+        <div id="display">
             <div class="hud-item">
-                <p id="progressText" class="hud-prefix">
+                <p id="progressText" class="display-prefix">
                     Question
                 </p>
-                <div id="progressBar" id="progressBarFull"></div>
+                <div id="progressBar">
+                    <div id="progressBarFull"></div>
+                </div>
             </div>
-            <div class="hud-item">
-                <p class="hud-prefix">
+            <div class="display-item">
+                <p class="display-prefix">
                     Score
                 </p>
-                <h1 class="hud-main-text" id="score">
+                <h1 class="display-main-text" id="score">
                     0
                 </h1>
             </div>
         </div>
-        <div id="game" class="flex-center flex-column">
+        <div id="game" class="flex-center flex-column ">
             <h1 id="question">What is the anwser to this question?</h1>
             <div class="choice-container">
                 <p class="choice-prefix">A</p>
@@ -88,12 +112,12 @@
                 <p class="choice-text" data-number="4">Choice 4</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- End Of Game Page -->
 
     <!-- Social Media Icons -->
-    <footer class="container-other flex-column flex-center">
+    <footer class="container-smi flex-column flex-center">
         <div class="social-icons">
             <a href="https://www.instagram.com/" target=”_blank”><i class="fa-brands fa-instagram"></i></a>
             <a href="https://discord.com/" target=”_blank”><i class="fa-brands fa-discord"></i></a>

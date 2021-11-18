@@ -19,35 +19,35 @@ let questionCounter = 0;
 let allQuestions = [];
 
 let questionM = [{
-        question: "what is the correct term?",
-        choice1: "<script>",
-        choice2: "<javascript>",
-        choice3: "<js>",
-        choice4: "<scripting>",
+        question: "What does “www” stand for in a website browser?",
+        choice1: "Wild Wild West",
+        choice2: "World Wide Web",
+        choice3: "What Went Wrong",
+        choice4: "Wide World Web",
         answer: 2
     },
     {
-        question: "how does this work?",
-        choice1: "<scriptfdngnfdgn>",
-        choice2: "<javascriptndngdfhn>",
-        choice3: "<jsdfbgndfnf>",
-        choice4: "<scriptingfgddfg>",
+        question: "How long is an Olympic swimming pool (in meters)?",
+        choice1: "150 meters",
+        choice2: "25 meters",
+        choice3: "100 meters",
+        choice4: "50 meters",
         answer: 4
     },
     {
-        question: "do you need help?",
-        choice1: "<scriptngfdnbdgf>",
-        choice2: "<javascripffdgnfdt>",
-        choice3: "<jsfgnfgdn>",
-        choice4: "<scriptinngfdngdg>",
+        question: "What countries made up the original Axis powers in World War II?",
+        choice1: "Japan, US, UK",
+        choice2: "Germany, France and Belgium",
+        choice3: "Germany, Italy, and Japan",
+        choice4: "Russia, Italy and Japan",
         answer: 3
     },
     {
-        question: "what is your name?",
-        choice1: "<scripfgndfgndt>",
-        choice2: "<javascrfngfdnbgipt>",
-        choice3: "<jsgfgnfd>",
-        choice4: "<scriptifdngfdnng>",
+        question: "What geometric shape is generally used for stop signs?",
+        choice1: "Octagon",
+        choice2: "Circle",
+        choice3: "Hexagon",
+        choice4: "Oval",
         answer: 1
     }
 ];

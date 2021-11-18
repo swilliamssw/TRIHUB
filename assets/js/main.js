@@ -7,6 +7,7 @@ const scoreText = document.querySelector("#score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loading");
 const game = document.getElementById("game");
+const startBtn = docutment.getElementById("start-btn");
 
 
 let currentQuestion = {};

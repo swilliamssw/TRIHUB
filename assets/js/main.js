@@ -9,6 +9,7 @@ const loader = document.getElementById("loading");
 const game = document.getElementById("game");
 const startBtn = docutment.getElementById("start-btn");
 const homeView = document.getElementById("home")
+const endGame = docutment.getElementById("endGame")
 
 
 let currentQuestion = {};

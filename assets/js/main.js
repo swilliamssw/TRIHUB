@@ -24,7 +24,7 @@ let questionM = [{
         choice2: "<javascript>",
         choice3: "<js>",
         choice4: "<scripting>",
-        anwser: 2
+        answer: 2
     },
     {
         question: "how does this work?",
@@ -32,7 +32,7 @@ let questionM = [{
         choice2: "<javascriptndngdfhn>",
         choice3: "<jsdfbgndfnf>",
         choice4: "<scriptingfgddfg>",
-        anwser: 4
+        answer: 4
     },
     {
         question: "do you need help?",
@@ -40,7 +40,7 @@ let questionM = [{
         choice2: "<javascripffdgnfdt>",
         choice3: "<jsfgnfgdn>",
         choice4: "<scriptinngfdngdg>",
-        anwser: 3
+        answer: 3
     },
     {
         question: "what is your name?",
@@ -48,7 +48,7 @@ let questionM = [{
         choice2: "<javascrfngfdnbgipt>",
         choice3: "<jsgfgnfd>",
         choice4: "<scriptifdngfdnng>",
-        anwser: 1
+        answer: 1
     }
 ];
 

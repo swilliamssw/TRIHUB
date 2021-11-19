@@ -11,14 +11,11 @@ const startBtn = docutment.getElementById("start-btn");
 const homeView = document.getElementById("home")
 const endGame = docutment.getElementById("endGame")
 
+//CONSTANTS
+const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
+const MAX_QUESTIONS = 4; //MAX AMOUNT QUESTION PER QUIZ SECTION
 
-let currentQuestion = {};
-let answerAccepted = false;
-let score = 0;
-let questionCounter = 0;
-let allQuestions = [];
-
-let questionM = [{
+const questionM = [{
         question: "What does “www” stand for in a website browser?",
         choice1: "Wild Wild West",
         choice2: "World Wide Web",
@@ -52,9 +49,11 @@ let questionM = [{
     }
 ];
 
-//CONSTANTS
-const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
-const MAX_QUESTIONS = 4; //MAX AMOUNT QUESTION PER QUIZ SECTION
+let currentQuestion = {};
+let answerAccepted = false;
+let score = 0;
+let questionCounter = 0;
+let allQuestions = [];
 
 //START OF GAME
 startGame = () => {

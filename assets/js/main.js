@@ -95,7 +95,7 @@ choices.forEach(choice => {
 
         answerAccepted = false;
         const questionAnswer = currentQuestion.answer;
-        const answerSelected = choiceSelected.dataset['number'];
+        const answerSelected = parsInt(choiceSelected.dataset['number']);
 
         if (answerSelected === questionAnswer) {
             console.log('win')

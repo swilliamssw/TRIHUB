@@ -65,7 +65,7 @@ startGame = () => {
 
 //GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT IF NOT THEN ENDS THE GAME
 function getAQuestion() {
-    if (allQuestions.length == 0 || questionCounter > MAX_QUESTIONS) {
+    if (allQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('currentQuestion', score)
             //goes to end of the game
         return window.location.assign('/end.html');

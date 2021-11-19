@@ -68,7 +68,8 @@ function getAQuestion() {
     if (allQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('currentQuestion', score)
             //goes to end of the game
-        return window.location.assign('/end.html');
+        game.classList.add('hidden')
+        endGame.classList.remove('hidden')
     } else {
         questionCounter++;
         const questionIndex = Math.floor(Math.random() * allQuestions.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY

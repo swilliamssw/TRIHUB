@@ -64,26 +64,27 @@ startGame = () => {
 };
 
 //GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT IF NOT THEN ENDS THE GAME
-getAQuestion = () => {
+function getAQuestion() {
     if (allQuestions.length == 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('currentQuestion', score)
             //goes to end of the game
         return window.location.assign('/end.html');
-    }
-    questionCounter++;
-    const questionIndex = Math.floor(Math.random() * allQuestions.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
-    currentQuestion = allQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+    } else {
+        questionCounter++;
+        const questionIndex = Math.floor(Math.random() * allQuestions.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
+        currentQuestion = allQuestions[questionIndex];
+        question.innerText = currentQuestion.question;
 
-    //Grabs choices for the questions
-    choices.forEach(choice => {
-        let number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number]; //uses choices and gets the correct choice out of the question
-    });
+        //Grabs choices for the questions
+        choices.forEach(choice => {
+            let number = choice.dataset['number'];
+            choice.innerText = currentQuestion['choice' + number]; //uses choices and gets the correct choice out of the question
+        });
 
-    allQuestions.splice(questionIndex, 1); //Leaves out question that have been just used 
+        allQuestions.splice(questionIndex, 1); //Leaves out question that have been just used 
 
-    answerAccepted = true;
+        answerAccepted = true;
+    };
 };
 
 // Goes through each choices

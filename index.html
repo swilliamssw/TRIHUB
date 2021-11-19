@@ -22,7 +22,7 @@
     </section>
 
     <!-- Loading Bar -->
-    <div class=" continer-game flex-center flex-column hidden">
+    <div id="loading" class=" continer-game flex-center flex-column hidden">
         <div id="loading">
             <div class="bars"></div>
             <div class="bars"></div>
@@ -36,13 +36,13 @@
     </div>
 
     <!-- High Score Pages -->
-    <section id="highscores" class="container-other flex-column flex-center">
+    <section id="highscores" class="container-other flex-column flex-center hidden">
         <H1>High Scores <i class="fas thin fa-crown"></i></H1>
         <a href="#home" class="btn">Home</a>
     </section>
 
     <!-- Quiz Selection -->
-    <section id="quiz-selector" class="container flex-column flex-center justify-center  ">
+    <section id="quiz-selector" class="container flex-column flex-center justify-center hidden  ">
         <H1>Choose Your Quiz</H1>
         <a href="#game" class="btn">Play!</a>
         <div class="rowQuizSelector">
@@ -71,7 +71,7 @@
 
     <!-- Game Page -->
 
-    <div id="game" class="container-game flex-column flex-center ">
+    <div id="game" class="container-game flex-column flex-center hidden ">
         <div id="display">
             <div class="hud-item">
                 <p id="progressText" class="display-prefix">
@@ -112,7 +112,7 @@
     </div>
 
     <!-- End Of Game Page -->
-    <section id="endGame" class="result-page">
+    <section id="endGame" class="hidden">
         <h1> YOU WIN! </h1>
     </section>
 

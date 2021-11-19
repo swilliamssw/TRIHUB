@@ -10,6 +10,7 @@ const game = document.getElementById("game");
 const startBtn = document.getElementById("start-btn");
 const homeView = document.getElementById("home")
 const endGame = document.getElementById("endGame")
+const Swal = require('sweetalert2');
 
 //CONSTANTS
 const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER

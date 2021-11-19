@@ -94,7 +94,7 @@ choices.forEach(choice => {
         if (!answerAccepted) return;
 
         answerAccepted = false;
-        const choiceSelected = e.target;
+        const questionAnswer = currentQuestion.answer;
         const answerSelected = choiceSelected.dataset['number'];
 
         if (answerSelected === questionAnswer) {
@@ -111,8 +111,9 @@ choices.forEach(choice => {
 
 });
 
-incrementScore = num => {
-    score += num;
+incrementScore = () => {
+    score++
     scoreText.innerText = score;
+    console.log(score)
 };
 startGame();

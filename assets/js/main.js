@@ -56,7 +56,7 @@ let questionCounter = 0;
 let allQuestions = [];
 
 //START OF GAME
-startGame = () => {
+function startGame() {
     questionCounter = 0;
     score = 0;
     allQuestions = [...questionM];

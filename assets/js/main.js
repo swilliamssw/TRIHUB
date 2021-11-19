@@ -7,9 +7,9 @@ const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loading");
 const game = document.getElementById("game");
-const startBtn = docutment.getElementById("start-btn");
+const startBtn = document.getElementById("start-btn");
 const homeView = document.getElementById("home")
-const endGame = docutment.getElementById("endGame")
+const endGame = document.getElementById("endGame")
 
 //CONSTANTS
 const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
@@ -95,9 +95,9 @@ choices.forEach(choice => {
 
         answerAccepted = false;
         const questionAnswer = currentQuestion.answer;
-        const answerSelected = parsInt(choiceSelected.dataset['number']);
+        const answerSelected = choice.dataset['number'];
 
-        if (answerSelected === questionAnswer) {
+        if (answerSelected == questionAnswer) {
             console.log('win')
             incrementScore();
         } else {

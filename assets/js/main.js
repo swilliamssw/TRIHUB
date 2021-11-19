@@ -97,14 +97,12 @@ choices.forEach(choice => {
         const choiceSelected = e.target;
         const answerSelected = choiceSelected.dataset['number'];
 
-        let classToApply = 'wrong';
-        if (answerSelected == choiceSelected.answer) {
-            classToApply = 'right'
+        if (answerSelected === questionAnswer) {
+            console.log('win')
+            incrementScore();
+        } else {
+            console.log('lose')
         }
-        if (answerSelected == 'right') {
-            incrementScore(CORRECT_POINTS);
-        }
-        console.log(answerSelected == currentQuestion.answer);
 
         progressText.innerText = `Question Number ${questionCounter} of ${MAX_QUESTIONS}`;
         progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;

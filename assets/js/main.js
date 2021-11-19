@@ -117,6 +117,7 @@ incrementScore = () => {
     console.log(score)
 };
 startGame();
+
 startBtn.addEventListener("click", () => {
     homeView.classList.add('hidden')
     game.classList.remove('hidden')

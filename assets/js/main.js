@@ -10,7 +10,7 @@ const game = document.getElementById("game");
 const startBtn = document.getElementById("start-btn");
 const homeView = document.getElementById("home")
 const endGame = document.getElementById("endGame")
-const Swal = ('sweetalert2');
+
 
 //CONSTANTS
 const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
@@ -100,12 +100,25 @@ choices.forEach(choice => {
         const answerSelected = choice.dataset['number'];
 
         if (answerSelected == questionAnswer) {
-            console.log('win')
+            Swal.fire({
+                position: 'center',
+                icon: 'CORRECT!',
+                title: "That's Correct!",
+                showConfirmButton: false,
+                timer: 1500
+            });
+
             incrementScore();
         } else {
-            console.log('lose')
-        }
+            Swal.fire({
+                position: 'center',
+                icon: 'INCORRECT!',
+                title: "That's Incorrect!",
+                showConfirmButton: false,
+                timer: 1500
+            });
 
+        }
         progressText.innerText = `Question Number ${questionCounter} of ${MAX_QUESTIONS}`;
         progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
         getAQuestion();

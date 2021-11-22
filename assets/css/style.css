@@ -103,10 +103,11 @@
             #loading {
                 position: absolute;
                 height: 0rem;
-                top: 10rem;
-                left: 64rem;
+                top: 17rem;
+                left: 31.5rem;
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 transform: translate(-50%, -50%);
             }
             

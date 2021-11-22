@@ -62,7 +62,9 @@ function startGame() {
     score = 0;
     allQuestions = [...questionM];
     getAQuestion();
+    setTimeout(homeView.classList.remove('hidden'), 3000);
 }
+
 
 //GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT IF NOT THEN ENDS THE GAME
 function getAQuestion() {

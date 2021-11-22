@@ -14,7 +14,7 @@ const endGame = document.getElementById("endGame");
 
 //CONSTANTS
 const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
-const MAX_QUESTIONS = 6; //MAX AMOUNT QUESTION PER QUIZ SECTION
+const MAX_QUESTIONS = 10; //MAX AMOUNT QUESTION PER QUIZ SECTION
 
 const questionM = [{
         question: "What does “www” stand for in a website browser?",
@@ -113,7 +113,7 @@ const questionM = [{
         answer: 2
     },
     {
-        question: " How many sides does a Dodecahedron have?",
+        question: "How many sides does a Dodecahedron have?",
         choice1: "12",
         choice2: "24",
         choice3: "14",
@@ -210,16 +210,14 @@ function getAQuestion() {
             let number = choice.dataset['number'];
             choice.innerText = currentQuestion['choice' + number]; //uses choices and gets the correct choice out of the question
         });
-
         allQuestions.splice(questionIndex, 1); //Leaves out question that have been just used 
-
         answerAccepted = true;
     }
 }
 
 // Goes through each choices
 choices.forEach(choice => {
-    choice.addEventListener("click", e => {
+    choice.addEventListener("click", choices => {
         if (!answerAccepted) return;
 
         answerAccepted = false;
@@ -239,7 +237,7 @@ choices.forEach(choice => {
         } else {
             Swal.fire({
                 position: '`top-end`',
-                icon: 'success',
+                icon: 'error',
                 title: `SORRY NOT RIGHT THE CORRECT ANSWER IS ${currentQuestion.answer}!`,
                 showConfirmButton: false,
                 timer: 1500
@@ -255,7 +253,7 @@ choices.forEach(choice => {
 
 incrementScore = () => {
     score++;
-    scoreText.innerText = score;
+    scoreText.innerText = score++;
 };
 startGame();
 

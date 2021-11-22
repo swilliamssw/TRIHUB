@@ -8,8 +8,8 @@ const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById("loading");
 const game = document.getElementById("game");
 const startBtn = document.getElementById("start-btn");
-const homeView = document.getElementById("home")
-const endGame = document.getElementById("endGame")
+const homeView = document.getElementById("home");
+const endGame = document.getElementById("endGame");
 
 
 //CONSTANTS
@@ -62,15 +62,15 @@ function startGame() {
     score = 0;
     allQuestions = [...questionM];
     getAQuestion();
-};
+}
 
 //GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT IF NOT THEN ENDS THE GAME
 function getAQuestion() {
     if (allQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-        localStorage.setItem('currentQuestion', score)
-            //goes to end of the game
-        game.classList.add('hidden')
-        endGame.classList.remove('hidden')
+        localStorage.setItem('currentQuestion', score);
+        //goes to end of the game
+        game.classList.add('hidden');
+        endGame.classList.remove('hidden');
 
     } else {
         questionCounter++;
@@ -87,8 +87,8 @@ function getAQuestion() {
         allQuestions.splice(questionIndex, 1); //Leaves out question that have been just used 
 
         answerAccepted = true;
-    };
-};
+    }
+}
 
 // Goes through each choices
 choices.forEach(choice => {
@@ -100,20 +100,20 @@ choices.forEach(choice => {
         const answerSelected = choice.dataset['number'];
 
         if (answerSelected == questionAnswer) {
+
             Swal.fire({
-                position: 'center',
-                icon: 'CORRECT!',
-                title: "That's Correct!",
+                position: '`top-end`',
+                icon: 'success',
+                title: 'GOOD JOB!',
                 showConfirmButton: false,
                 timer: 1500
             });
-
             incrementScore();
         } else {
             Swal.fire({
-                position: 'center',
-                icon: 'INCORRECT!',
-                title: "That's Incorrect!",
+                position: '`top-end`',
+                icon: 'success',
+                title: 'SORRY NOT QUITE RIGHT!',
                 showConfirmButton: false,
                 timer: 1500
             });
@@ -127,13 +127,13 @@ choices.forEach(choice => {
 });
 
 incrementScore = () => {
-    score++
+    score = 0++;
     scoreText.innerText = score;
-    console.log(score)
+
 };
 startGame();
 
 startBtn.addEventListener("click", () => {
-    homeView.classList.add('hidden')
-    game.classList.remove('hidden')
-})
+    homeView.classList.add('hidden');
+    game.classList.remove('hidden');
+});

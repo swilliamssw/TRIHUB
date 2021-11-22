@@ -113,7 +113,7 @@ choices.forEach(choice => {
             Swal.fire({
                 position: '`top-end`',
                 icon: 'success',
-                title: 'SORRY NOT QUITE RIGHT!',
+                title: `SORRY NOT RIGHT THE CORRECT ANSWER IS ${currentQuestion.answer}!`,
                 showConfirmButton: false,
                 timer: 1500
             });
@@ -127,7 +127,7 @@ choices.forEach(choice => {
 });
 
 incrementScore = () => {
-    score = 0++;
+    score++;
     scoreText.innerText = score;
 
 };

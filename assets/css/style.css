@@ -272,10 +272,4 @@
                 width: 0%;
             }
             
-            .right {
-                background-color: rgb(3, 248, 126) !important;
-            }
-            
-            .wrong {
-                background-color: rgb(211, 1, 1) !important;
-            }
+            #endGame h1 {}

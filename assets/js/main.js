@@ -231,7 +231,7 @@ choices.forEach(choice => {
                 icon: 'success',
                 title: 'GOOD JOB!',
                 showConfirmButton: false,
-                timer: 1500
+                timer: 1000
             });
             incrementScore();
         } else {
@@ -240,9 +240,8 @@ choices.forEach(choice => {
                 icon: 'error',
                 title: `SORRY NOT RIGHT THE CORRECT ANSWER IS ${currentQuestion.answer}!`,
                 showConfirmButton: false,
-                timer: 1500
+                timer: 1000
             });
-
         }
         progressText.innerText = `Question Number ${questionCounter} of ${MAX_QUESTIONS}`;
         progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
@@ -253,7 +252,7 @@ choices.forEach(choice => {
 
 incrementScore = () => {
     score++;
-    scoreText.innerText = score++;
+    scoreText.innerText = score;
 };
 startGame();
 

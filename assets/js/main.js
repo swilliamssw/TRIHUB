@@ -46,7 +46,7 @@ const questionM = [{
         choice2: "Circle",
         choice3: "Hexagon",
         choice4: "Oval",
-        answer: 1
+        answer: 2
     },
     {
         question: "How many languages are written from right to left?",
@@ -169,7 +169,7 @@ const questionM = [{
         answer: 4
     },
     {
-        question: "What other country, besides the US, uses the US dollar as its official currency?",
+        question: "What other country, besides the US,uses the US dollar as its official currency?",
         choice1: "Ecuador",
         choice2: "Canada",
         choice3: "Mexico",

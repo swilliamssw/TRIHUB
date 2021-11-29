@@ -20,22 +20,15 @@
             }
             
             .container {
-                width: 100vw;
-                height: 80vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                max-width: 80rem;
-                margin: 3rem;
-                padding: 12rem;
+                margin: 0 auto;
+                padding: 0rem;
+                height: 1rem;
             }
             
             .container-game {
                 width: 100vw;
-                height: 80vh;
+                height: 90vh;
                 display: flex;
-                margin: 5rem;
-                padding: 10rem;
             }
             
             .flex-column {
@@ -81,6 +74,13 @@
                 transform: scale(1.11);
             }
             /* Styling For Font Awesome Icon (Crown) */
+            
+            #endGameCrown {
+                background-color: rgb(72, 175, 175);
+                font-size: 5rem;
+                margin-left: 0.5rem;
+                color: aliceblue;
+            }
             
             .fa-crown {
                 background: rgb(169, 173, 177);
@@ -180,8 +180,8 @@
                 color: aliceblue;
                 font-size: 4rem;
                 padding: 0rem 1rem;
+                bottom: 1rem;
                 cursor: pointer;
-                justify-content: center;
             }
             /* Game Page */
             
@@ -266,8 +266,4 @@
                 height: 100%;
                 background: rgb(3, 248, 248);
                 width: 0%;
-            }
-            
-            #play {
-                padding: 6rem;
             }

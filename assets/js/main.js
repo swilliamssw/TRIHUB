@@ -266,3 +266,11 @@ newGame.addEventListener("click", () => {
     endGame.classList.add('hidden');
     homeView.classList.remove('hidden');
 });
+
+function loadingBar(loading) {
+    if (loading) {
+        loader.classList.remove('hidden');
+    } else {
+        loader.classList.add('hidden');
+    }
+};

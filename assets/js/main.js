@@ -10,7 +10,7 @@ const game = document.getElementById("game");
 const startBtn = document.getElementById("start-btn");
 const homeView = document.getElementById("home");
 const endGame = document.getElementById("endGame");
-
+const newGame = docuemnt.getElementById('restartGame')
 
 //CONSTANTS
 const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
@@ -260,4 +260,9 @@ startGame();
 startBtn.addEventListener("click", () => {
     homeView.classList.add('hidden');
     game.classList.remove('hidden');
+});
+
+newGame.addEventListener("click", () => {
+    endGame.classList.add('hidden');
+    homeView.classList.remove('hidden');
 });

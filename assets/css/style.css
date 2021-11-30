@@ -32,6 +32,24 @@
                 padding: 0 20rem 0.5rem;
             }
             
+            @media only screen and (min-width: 320px) {
+                .container-game {
+                    max-width: 30%;
+                    height: 70vh;
+                    padding: 0 19rem 0.5rem;
+                }
+                h1 {
+                    color: aliceblue;
+                    font-size: 1.4rem;
+                    margin-bottom: 2rem;
+                }
+                h2 {
+                    color: aliceblue;
+                    margin-bottom: 2rem;
+                    font-size: 3.4rem;
+                }
+            }
+            
             .flex-column {
                 display: flex;
                 flex-direction: column;

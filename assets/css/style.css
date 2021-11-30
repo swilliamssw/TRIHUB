@@ -31,8 +31,7 @@
                 display: flex;
                 padding: 0 20rem 0.5rem;
             }
-            
-            @media only screen and (max-width: 378px) {
+            /* @media only screen and (max-width: 378px) {
                 .container-game {
                     max-width: 30%;
                     height: 70vh;
@@ -48,7 +47,7 @@
                     margin-bottom: 2rem;
                     font-size: 3.4rem;
                 }
-            }
+            }*/
             
             .flex-column {
                 display: flex;

@@ -17,7 +17,6 @@
     <section id="home" class="container-game flex-column flex-center">
         <H1>TRIHUB</H1>
         <a href="#game" id="start-btn" class="btn">GO!</a>
-        <a href="#highscores" id="highscores-btn" class="btn"> High Scores <i class="fas thin fa-crown"></i></a>
     </section>
 
     <!-- Loading Bar -->
@@ -33,11 +32,6 @@
             <div class="bars"></div>
         </div>
     </div>
-    <!-- High Score Pages -->
-    <section id="highscores" class="container-game flex-column flex-center hidden">
-        <H1>High Scores <i class="fas thin fa-crown"></i></H1>
-        <a href="/#game" id="restartGame" class="btn">Home</a>
-    </section>
     <!-- Game Page -->
     <section>
         <div id="game" class="container-game flex-column flex-center hidden ">
@@ -82,14 +76,9 @@
     <!-- End Of Game Page -->
     <section id="endGame" class="container-game flex-column flex-center hidden ">
         <i id="endGameCrown" class="fas thin fa-crown"></i>
-        <h1>WELL DONE YOU SCORED! </h1>
+        <h1 id="endGameTitle">WELL DONE YOU SCORED! </h1>
         <h1 id="finalScore">0</h1>
-        <form class="end-form container-game">
-            <h2 id="highScore-name">Enter Your Name Below To Save Your Score!</h2>
-            <input type="text" name="name" id="username" placeholder="Enter Your Name">
-            <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)">SAVE</button>
-        </form>
-        <a href="/#game" id="restartGame" class="btn">PLAY AGAIN</a>
+        <a href="/index.html" id="start-btn" class="btn">PLAY AGAIN!</a>
     </section>
     <!-- Social Media Icons -->
     <footer class="container flex-column flex-center">

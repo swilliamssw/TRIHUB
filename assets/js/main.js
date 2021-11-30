@@ -11,7 +11,8 @@ const startBtn = document.getElementById("start-btn");
 const homeView = document.getElementById("home");
 const endGame = document.getElementById("endGame");
 const newGame = document.getElementById('restartGame')
-const highScore = document.getElementById('highscores-btn')
+const mostRecentScore = document.getElementById('mostRecentScore')
+
 
 //CONSTANTS
 const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
@@ -201,7 +202,7 @@ function getAQuestion() {
         localStorage.setItem('currentQuestion', score);
         game.classList.add('hidden');
         endGame.classList.remove('hidden');
-        finalScore.innerHTML = (`${score}/ ${quant}`);
+        finalScore.innerHTML = (`${score}`);
         loadingBar(false);
     } else {
         questionCounter++;
@@ -278,8 +279,3 @@ function loadingBar(loading) {
         loader.classList.add('hidden');
     }
 };
-
-highScore.addEventListener("click", () => {
-    homeView.classList.add('hidden');
-    highscores.classList.remove('hidden');
-})

@@ -10,7 +10,7 @@ const game = document.getElementById("game");
 const startBtn = document.getElementById("start-btn");
 const homeView = document.getElementById("home");
 const endGame = document.getElementById("endGame");
-const newGame = docuemnt.getElementById('restartGame')
+const newGame = document.getElementById('restartGame')
 
 //CONSTANTS
 const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
@@ -195,11 +195,13 @@ function startGame() {
 
 //GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT IF NOT THEN ENDS THE GAME
 function getAQuestion() {
-
+    loadingBar(true);
     if (allQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('currentQuestion', score);
         game.classList.add('hidden');
         endGame.classList.remove('hidden');
+        scoreText.innerHTML = (`${score}/ ${quant}`);
+        loadingBar(false);
     } else {
         questionCounter++;
         const questionIndex = Math.floor(Math.random() * allQuestions.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
@@ -214,6 +216,7 @@ function getAQuestion() {
         allQuestions.splice(questionIndex, 1); //Leaves out question that have been just used 
         answerAccepted = true;
     }
+    loadingBar(false);
 }
 
 // Goes through each choices
@@ -265,6 +268,7 @@ startBtn.addEventListener("click", () => {
 newGame.addEventListener("click", () => {
     endGame.classList.add('hidden');
     homeView.classList.remove('hidden');
+
 });
 
 function loadingBar(loading) {

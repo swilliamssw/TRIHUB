@@ -21,7 +21,7 @@
     </section>
 
     <!-- Loading Bar -->
-    <div class=" loading continer-game flex-center flex-column  ">
+    <div class=" loading continer-game flex-center flex-column hidden">
         <div id="loading">
             <div class="bars"></div>
             <div class="bars"></div>
@@ -82,9 +82,15 @@
     <!-- End Of Game Page -->
     <section id="endGame" class="container-game flex-column flex-center hidden ">
         <i id="endGameCrown" class="fas thin fa-crown"></i>
-        <H1>WELL DONE YOU SCORED! </H1>
-        <div id="score"></div>
-        <a href="#home" id="restartGame" class="btn">PLAY AGAIN</a>
+        <h1>WELL DONE YOU SCORED! </h1>
+        <h1 id="finalScore">0</h1>
+        <form class="end-form container-game">
+            <h2 id="highScore-name">Enter Your Name Below To Save Your Score!</h2>
+            <input type="text" name="name" id="username" placeholder="Enter Your Name">
+            <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)"></button>
+        </form>
+        <a href="/index.html/#game" id="restartGame" class="btn">PLAY AGAIN</a>
+        <a href="/index.html/#home" class="btn">GO HOME</a>
     </section>
     <!-- Social Media Icons -->
     <footer class="container flex-column flex-center">

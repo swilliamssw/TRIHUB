@@ -97,6 +97,14 @@
             }
             /* Loader styling (Based on youtube video in README.MD & loader lession from w3school) */
             
+            .loading {
+                position: absolute;
+                top: 17rem;
+                left: 31.5rem;
+                align-items: center;
+                justify-content: center;
+            }
+            
             #loading {
                 position: absolute;
                 height: 0rem;

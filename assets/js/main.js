@@ -129,11 +129,11 @@ const questionM = [{
         answer: 4
     },
     {
-        question: "Which traditional Spanish dance originated in Andalusia and is recognised by UNESCO as a heritage of humanity?",
-        choice1: "Sardana",
-        choice2: "Tango",
-        choice3: "Flamenco",
-        choice4: "Paso Doble",
+        question: "How many colors are there in a rainbow?",
+        choice1: "11",
+        choice2: "8",
+        choice3: "7",
+        choice4: "9",
         answer: 3
     },
     {
@@ -195,6 +195,7 @@ function startGame() {
 
 //GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT IF NOT THEN ENDS THE GAME
 function getAQuestion() {
+
     if (allQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('currentQuestion', score);
         game.classList.add('hidden');
@@ -227,7 +228,7 @@ choices.forEach(choice => {
         if (answerSelected == questionAnswer) {
 
             Swal.fire({
-                position: '`top-end`',
+                position: 'center',
                 icon: 'success',
                 title: 'GOOD JOB!',
                 showConfirmButton: false,
@@ -236,7 +237,7 @@ choices.forEach(choice => {
             incrementScore();
         } else {
             Swal.fire({
-                position: '`top-end`',
+                position: 'center',
                 icon: 'error',
                 title: `SORRY NOT RIGHT THE CORRECT ANSWER IS ${currentQuestion.answer}!`,
                 showConfirmButton: false,

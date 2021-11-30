@@ -36,7 +36,7 @@
     <!-- High Score Pages -->
     <section id="highscores" class="container-game flex-column flex-center hidden">
         <H1>High Scores <i class="fas thin fa-crown"></i></H1>
-        <a href="#home" class="btn">Home</a>
+        <a href="/#game" id="restartGame" class="btn">Home</a>
     </section>
     <!-- Game Page -->
     <section>
@@ -87,10 +87,9 @@
         <form class="end-form container-game">
             <h2 id="highScore-name">Enter Your Name Below To Save Your Score!</h2>
             <input type="text" name="name" id="username" placeholder="Enter Your Name">
-            <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)"></button>
+            <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)">SAVE</button>
         </form>
-        <a href="/index.html/#game" id="restartGame" class="btn">PLAY AGAIN</a>
-        <a href="/index.html/#home" class="btn">GO HOME</a>
+        <a href="/#game" id="restartGame" class="btn">PLAY AGAIN</a>
     </section>
     <!-- Social Media Icons -->
     <footer class="container flex-column flex-center">

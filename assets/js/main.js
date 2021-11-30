@@ -1,23 +1,21 @@
-/*jshint sub:true*/
-/* jshint esversion: 6 */
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
-const loader = document.getElementById("loading");
 const game = document.getElementById("game");
 const startBtn = document.getElementById("start-btn");
 const homeView = document.getElementById("home");
 const endGame = document.getElementById("endGame");
-const newGame = document.getElementById('restartGame')
-const mostRecentScore = document.getElementById('mostRecentScore')
+const newGame = document.getElementById('restartGame');
 
-
-//CONSTANTS
-const CORRECT_POINTS = 100; //POINTS AWARDED FOR EACH CORRECT ANSWER
-const MAX_QUESTIONS = 10; //MAX AMOUNT QUESTION PER QUIZ SECTION
-
+/**
+ * CONSTANTS
+ */
+const MAX_QUESTIONS = 10; /** * MAX AMOUNT QUESTION PER QUIZ SECTION */
+/**
+ * Questions & Answers for for the Game
+ */
 const questionM = [{
         question: "What does “www” stand for in a website browser?",
         choice1: "Wild Wild West",
@@ -187,7 +185,9 @@ let score = 0;
 let questionCounter = 0;
 let allQuestions = [];
 
-//START OF GAME
+/**
+ *START OF GAME
+ */
 function startGame() {
     questionCounter = 0;
     score = 0;
@@ -195,37 +195,39 @@ function startGame() {
     getAQuestion();
 }
 
-//GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT IF NOT THEN ENDS THE GAME
+/**
+ * GRABS NEW AND RANDOM QUESTION FOR GAME & CHECKS IF ANY QUESTIONS ARE LEFT IF NOT THEN ENDS THE GAME
+ */
 function getAQuestion() {
-    loadingBar(true);
     if (allQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('currentQuestion', score);
         game.classList.add('hidden');
         endGame.classList.remove('hidden');
         finalScore.innerHTML = (`${score}`);
-        loadingBar(false);
     } else {
         questionCounter++;
-        const questionIndex = Math.floor(Math.random() * allQuestions.length); //PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY
+        const questionIndex = Math.floor(Math.random() * allQuestions.length); /** *PULLS RANDOM QUESTIONS FROM AVAILABLE QUESTION ARRAY */
         currentQuestion = allQuestions[questionIndex];
         question.innerText = currentQuestion.question;
 
-        //Grabs choices for the questions
+        /** 
+         * Grabs choices for the questions
+         */
         choices.forEach(choice => {
             let number = choice.dataset['number'];
-            choice.innerText = currentQuestion['choice' + number]; //uses choices and gets the correct choice out of the question
+            choice.innerText = currentQuestion['choice' + number]; /** *uses choices and gets the correct choice out of the question */
         });
-        allQuestions.splice(questionIndex, 1); //Leaves out question that have been just used 
+        allQuestions.splice(questionIndex, 1); /** *Leaves out question that have been just used */
         answerAccepted = true;
     }
-    loadingBar(false);
 }
 
-// Goes through each choices
+/** 
+ * Goes through each choices
+ */
 choices.forEach(choice => {
     choice.addEventListener("click", choices => {
         if (!answerAccepted) return;
-
         answerAccepted = false;
         const questionAnswer = currentQuestion.answer;
         const answerSelected = choice.dataset['number'];
@@ -255,7 +257,9 @@ choices.forEach(choice => {
     }, 400);
 
 });
-
+/**
+ * increments score of correct answers
+ */
 incrementScore = () => {
     score++;
     scoreText.innerText = score;
@@ -271,11 +275,3 @@ newGame.addEventListener("click", () => {
     endGame.classList.add('hidden');
     homeView.classList.remove('hidden');
 });
-
-function loadingBar(loading) {
-    if (loading) {
-        loader.classList.remove('hidden');
-    } else {
-        loader.classList.add('hidden');
-    }
-};

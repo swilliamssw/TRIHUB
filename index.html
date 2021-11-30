@@ -11,6 +11,7 @@
     <script src=https://cdn.jsdelivr.net/npm/sweetalert2@11.1.10/dist/sweetalert2.all.min.js class="sweetAlert2"></script>
     <title>TRIHUB</title>
 </head>
+
 <!-- Header section with Logo & Social Icons -->
 
 <body>
@@ -19,19 +20,6 @@
         <a href="#game" id="start-btn" class="btn">GO!</a>
     </section>
 
-    <!-- Loading Bar -->
-    <div class=" loading continer-game flex-center flex-column hidden">
-        <div id="loading">
-            <div class="bars"></div>
-            <div class="bars"></div>
-            <div class="bars"></div>
-            <div class="bars"></div>
-            <div class="bars"></div>
-            <div class="bars"></div>
-            <div class="bars"></div>
-            <div class="bars"></div>
-        </div>
-    </div>
     <!-- Game Page -->
     <section>
         <div id="game" class="container-game flex-column flex-center hidden ">
@@ -72,13 +60,15 @@
                     <p class="choice-text" data-number="4">Choice 4</p>
                 </div>
             </div>
+        </div>
     </section>
+
     <!-- End Of Game Page -->
     <section id="endGame" class="container-game flex-column flex-center hidden ">
         <i id="endGameCrown" class="fas thin fa-crown"></i>
         <h1 id="endGameTitle">WELL DONE YOU SCORED! </h1>
         <h1 id="finalScore">0</h1>
-        <a href="/index.html" id="start-btn" class="btn">PLAY AGAIN!</a>
+        <a href="/index.html" id="restartGame" class="btn">PLAY AGAIN!</a>
     </section>
     <!-- Social Media Icons -->
     <footer class="container flex-column flex-center">

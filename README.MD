@@ -1,6 +1,6 @@
 # __TRIHUB__
 
-Trihub is general knownledge based game which provides and simple but fun interaction for user to enjoy and play  
+Trihub is general knownledge based .game which provides and simple but fun interaction for user to enjoy and play  
 
 Users of this website are able to find information about the hand-picked workout videos on the site and can sign up there and then for a slot to gain access to soon to come content. This site is primary targeted towards gym enthusiasts as an alternative to not being able to go to the gym.
 

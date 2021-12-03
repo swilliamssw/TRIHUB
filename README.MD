@@ -4,7 +4,7 @@ Trihub is  which provides and simple but fun interaction for user to enjoy and p
 
 Players can enjoy a fun interactive quiz testing their genral 
 
-![Responsive Mockup](/assets/images/website-reponsive.jpeg)
+![Responsive Mockup](/assets/images/website-reponsive.png)
 
 ## Features<hr>
 
@@ -17,7 +17,7 @@ Players can enjoy a fun interactive quiz testing their genral
   - The logo, play button and social links are all in a font that is congruent with the rest of the pages and a color that contrast well with the background. 
   - The navigation clearly tells the user the name of the brand and Game and makes the different sections easy to access and find.
 
-![GAME HOME PAGE](/assets/images/home-page.jpeg)
+![GAME HOME PAGE](/assets/images/home-page.png)
 
 - __Game Page__
   - The game is 

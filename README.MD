@@ -1,25 +1,26 @@
 # __TRIHUB__
 
-Trihub is general knownledge based .game which provides and simple but fun interaction for user to enjoy and play  
+Trihub is  which provides and simple but fun interaction for user to enjoy and play  
 
-Users of this website are able to find information about the hand-picked workout videos on the site and can sign up there and then for a slot to gain access to soon to come content. This site is primary targeted towards gym enthusiasts as an alternative to not being able to go to the gym.
+Players can enjoy a fun interactive quiz testing their genral 
 
-![Responsive Mockup](/assets/images/Websites-responsive.jpeg)
+![Responsive Mockup](/assets/images/website-reponsive.jpeg)
 
 ## Features<hr>
 
 ### Existing Features
 
-- __Navigation Buttons__
-  - Featured at the top of the page, the navigtion shows the brands Logo in the left corner __GO__ which links to the top of the page.
-  - The other navigation links are Home, Explore & About Us which links to differnet sections of the same page. 
-  - The navigation is in a font that is congruent with the rest of the page text and a color that contrast with the background. 
-  - The navigation clearly tells the user the name of the brand and website  and make the deffent sections information easy to access and find.
+- __Play Buttons__
+  - Featured at the start of the game, the player is welcomed with the home screen, where the Trihub white logo is presented against the teal background. 
+  - Below the Trihub logo the user is presented with a play button in center of the screen __GO__ which links to the main game page where the  player can begin playing the quiz.
+  The other navigation links are the social pages, which are, Instagram, Discord, and Twitter which links to the differnet social platforms page openning up a new window when doing so. 
+  - The logo, play button and social links are all in a font that is congruent with the rest of the pages and a color that contrast well with the background. 
+  - The navigation clearly tells the user the name of the brand and Game and makes the different sections easy to access and find.
 
-![Nav Bar](/assets/Media/homevio_header.png)
+![GAME HOME PAGE](/assets/images/home-page.jpeg)
 
-- __The Landing page Video__
-  - The hero video shows a woman working out which ties into what the page is all about.
+- __Game Page__
+  - The game is 
   - The hero video includes a large header text of the slogan of the brand, which gives off a glass look for style. 
   - The hero image also includes a sign up button which navigates to the sign up form for easy navigation for the user, which is has a light highlight which is actioned when the mouse hoveers over it.
   - The hero video also includes a Logo for the Hovevio brand. in the bottom right corner. 
@@ -79,7 +80,6 @@ This external link will require them to log in with the details they have provid
   - I confirmed that the colours and fonts chosen are easy to read and accessible by running it through Lighthouse in devtools.
 ![Accessibility](/assets/Media/homevio_accessibility_score.png)
 ## Unfixed Bugs
-No unfixed bugs
 
 ## Deployment
  - The site was deployed to GitHub pages. The steps to deploy are as follows:

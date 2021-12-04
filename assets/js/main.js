@@ -246,7 +246,7 @@ choices.forEach(choice => {
             Swal.fire({
                 position: 'center',
                 icon: 'error',
-                title: `SORRY NOT RIGHT THE CORRECT ANSWER IS ${currentQuestion.answer}!`,
+                title: `SORRY NOT RIGHT! THE CORRECT ANSWER IS ${currentQuestion.answer}!`,
                 showConfirmButton: false,
                 timer: 1000
             });

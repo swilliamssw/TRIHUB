@@ -49,9 +49,18 @@ __Correct Answer__
 ![Footer](/assets/images/correct-answer.png)
 
 __Incorrect Answer__
-- The game gives indication by showing a pop up which says "SORRY Not Th" to indicate to the player that they have successfuly answered the question correctly.
+- The game gives indication by showing a pop up which says "SORRY NOT RIGHT! THE CORRECT ANSWER IS" to indicate to the player that they have successfuly answered the question correctly.
+- This also indicates to the player that what the correct answers for that specific question that had answered. 
+- The pop up is also timed and disapears after a few seconds and then displays the following question.
 
 ![Footer](/assets/images/incorrect-answer.png)
+
+__End Game Page__
+- The game gives indication by showing a pop up which says "SORRY NOT RIGHT! THE CORRECT ANSWER IS" to indicate to the player that they have successfuly answered the question correctly.
+- This also indicates to the player that what the correct answers for that specific question that had answered. 
+- The pop up is also timed and disapears after a few seconds and then displays the following question.
+
+![Footer](/assets/images/endGame-page.png)
 
 ### Features Left to Implement
 - Content access, so once the user has submitted their details, they would be presented with a welcome email, which will provide a link to another page which is similar in appearance to the Main page. <br>

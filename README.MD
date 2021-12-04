@@ -78,16 +78,22 @@ This external link will require them to log in with the details they have provid
   - No errors were returned when passing through the offical W3C validator. 
 [WS3 Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
 
-  ![](/assets/Media/w3c_validation.png) 
+  ![](/assets/images/html-validation.png) 
 
 - CSS
   - No errors were founf when passing through the offical (Jigsaw) Validator [(Jigsaw) validator](https://validator.w3.org/#validate_by_input)
 
-  ![](/assets/Media/(jigsaw)_validation.png)
+  ![](/assets/images/css-validation.png)
+
+- JavaScript
+ - No major errors were returned when passing through the offical JS Hint validator [JS Hint Validator](https://jshint.com)
+
+ ![](/assets/images/js-hint.png)
 
 - Accessibility 
   - I confirmed that the colours and fonts chosen are easy to read and accessible by running it through Lighthouse in devtools.
-![Accessibility](/assets/Media/homevio_accessibility_score.png)
+![Accessibility](/assets/images/accessibility.png)
+
 ## Unfixed Bugs
 
 ## Deployment
@@ -110,6 +116,7 @@ The live link can be found here - https://swilliamssw.github.io/HOMEVIO/
 - The instruction for horizonitally aligning my images and text was from [W3C How TO](https://www.w3schools.com/howto/howto_css_images_side_by_side.asp)
 
 - All instructions on how to positon and change things astetically were all taken from [W3C School Tutorials](https://www.w3schools.com/css/default.asp) 
+- Main break down of how to approuch this project structure wise were taken form [YouTube](https://www.youtube.com/watch?v=f4fB9Xg2JEY&ab_channel=BrianDesign)
 
 ### Media
 - The photos used on the home and sign up page are from This Open Source site Pexels [Pexels](https://www.pexels.com/)

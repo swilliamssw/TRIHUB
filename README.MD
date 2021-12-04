@@ -1,10 +1,7 @@
 # __TRIHUB__
 
-Trihub is  which provides and simple but fun interaction for user to enjoy and play  
-
-Players can enjoy a fun interactive quiz testing their genral 
-
-![Responsive Mockup](/assets/images/website-reponsive.png)
+Trihub is family freindly general knownledge quiz which is score based. Players can enjoy from a range of randomised questions which will offer player 10 questions to answer. 
+![Responsive Mockup](/assets/images/website-responsive.png)
 
 ## Features<hr>
 
@@ -15,28 +12,22 @@ Players can enjoy a fun interactive quiz testing their genral
   - Below the Trihub logo the user is presented with a play button in center of the screen __GO__ which links to the main game page where the  player can begin playing the quiz.
   The other navigation links are the social pages, which are, Instagram, Discord, and Twitter which links to the differnet social platforms page openning up a new window when doing so. 
   - The logo, play button and social links are all in a font that is congruent with the rest of the pages and a color that contrast well with the background. 
-  - The navigation clearly tells the user the name of the brand and Game and makes the different sections easy to access and find.
-
 ![GAME HOME PAGE](/assets/images/home-page.png)
 
 - __Game Page__
-  - The game is 
-  - The hero video includes a large header text of the slogan of the brand, which gives off a glass look for style. 
-  - The hero image also includes a sign up button which navigates to the sign up form for easy navigation for the user, which is has a light highlight which is actioned when the mouse hoveers over it.
-  - The hero video also includes a Logo for the Hovevio brand. in the bottom right corner. 
+  - The game page has is displayed right after the home page and is identical in style and appearance as the home page.
+![Game Page](/assets/images/game.png)
 
-![Landing Page](/assets/Media/homevio_herovideo.png)
-- __Explore services__ 
-  - The explore section gives the user brief information of the services theu may look forward to. 
-  - The images are shown as a way of giving the user a better visual understanding of what the services are about. 
-  - The images also have titles above them to better give the user description of the services provided by Homevio.
-![Services](/assets/Media/homevio_services.png)
+- __Hud Section__ 
+  - The hud section gives the user  information  which question they are on as well as how many quesions they have left. 
+  - The questions tracker, all has a bar which fills as the player answers the questions, to be able to give the player a more visial repesentation of their progression through the game.
+  - On the right hasn side is the title score and score tracker, this sections keeps a track of the amount of the answered question that are correct. 
+![Services](/assets/images/hud.png)
 
-- __About us page__
-  - The About us section gives details about what the brand is about and what they can use the services for. 
-  - This sections shows a interactive video which shows a man working out to provide more visual resource of what they can expect from the services. 
-
-  ![About Us](/assets/Media/homevio_aboutus.png)
+- __Questions Section__
+  - The question section is displayed right above the four possible answers below. 
+  - This area changes when the player answers each time, and is congruent with both font and colour. 
+  ![Question Section](/assets/images/questions.png)
 
 - __Sign Up Form__ 
   - The sign up section has a form to collect details from the user, so that they can sign up to the services of Homevio.

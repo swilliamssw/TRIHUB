@@ -1,6 +1,7 @@
 # __TRIHUB__
 
 Trihub is family freindly general knownledge quiz which is score based. Players can enjoy from a range of randomised questions which will offer player 10 questions to answer. 
+
 ![Responsive Mockup](/assets/images/website-responsive.png)
 
 ## Features<hr>
@@ -9,40 +10,48 @@ Trihub is family freindly general knownledge quiz which is score based. Players 
 
 - __Play Buttons__
   - Featured at the start of the game, the player is welcomed with the home screen, where the Trihub white logo is presented against the teal background. 
-  - Below the Trihub logo the user is presented with a play button in center of the screen __GO__ which links to the main game page where the  player can begin playing the quiz.
-  The other navigation links are the social pages, which are, Instagram, Discord, and Twitter which links to the differnet social platforms page openning up a new window when doing so. 
+  - Below the Trihub logo the user is presented with a play button in center of the screen __GO!__ which links to the main game page where the  player can begin playing the quiz.
+  - The other navigation links are the social pages, which are, Instagram, Discord, and Twitter which links to the differnet social platforms page openning up a new window when doing so. 
   - The logo, play button and social links are all in a font that is congruent with the rest of the pages and a color that contrast well with the background. 
+
 ![GAME HOME PAGE](/assets/images/home-page.png)
 
 - __Game Page__
   - The game page has is displayed right after the home page and is identical in style and appearance as the home page.
+
 ![Game Page](/assets/images/game.png)
 
 - __Hud Section__ 
   - The hud section gives the user  information  which question they are on as well as how many quesions they have left. 
   - The questions tracker, all has a bar which fills as the player answers the questions, to be able to give the player a more visial repesentation of their progression through the game.
   - On the right hasn side is the title score and score tracker, this sections keeps a track of the amount of the answered question that are correct. 
+
 ![Services](/assets/images/hud.png)
 
 - __Questions Section__
   - The question section is displayed right above the four possible answers below. 
   - This area changes when the player answers each time, and is congruent with both font and colour. 
+
   ![Question Section](/assets/images/questions.png)
 
-- __Sign Up Form__ 
-  - The sign up section has a form to collect details from the user, so that they can sign up to the services of Homevio.
-  - The form collects the Email and a password of the user so that they can then later receive more information and a link to the sign in page, which is to come.
-  - the sign form is valuable to the user as it gives them the ability to sign up and join our services.
-  - The sign up form also inlcludes a remember me tick box, which will work in accordance with the sign in link which will be sent to them later on to the users email.
+- __Answer Section__ 
+  - The answer sections displays four labeled tabs whcih have each possible answers to the questions presented above it.
+  - The tabs display A-D labels in the left side to indicate the answer for the player. 
+  - Over in the middle of the tabs is the actual answeres for the player to choose from. 
+  - The tabs have animation on them which allow them to glow and raise to indicate that the answer that the player is planning on picking before they click on it, whcih provides more indication to the player of the answer they are picking. 
 
-  ![Sign Up Form](/assets/Media/homevio_signup_form.png)
+  ![Answers Section](/assets/images/answers.png)
 
-- __The Footer__
-  - The footer section inludes the Homevio text logo, which will navigate them to the top of the page.
-  - The footer also includes the navigation links which will also navigate them to different section of the page without having to scroll all the way up again. 
-  - The footer section inludes social media icons to users so that they can find Homevio on Facebook, Instgram & Twitter.
-  - The Footer section is valuable to the user as this gives them the ability to find Homevio to stay update with whats going on in the brand if they need to.
-![Footer](/assets/Media/homevio_footer.png)
+__Correct Answer__
+  - The game gives indication by showing a pop up which says "Good Job" to indicate to the player that they have successfuly answered the question correctly.
+  - The pop up are timed and only last a few seconds before disapearing and revealing the next question. 
+
+![Footer](/assets/images/correct-answer.png)
+
+__Incorrect Answer__
+- The game gives indication by showing a pop up which says "SORRY Not Th" to indicate to the player that they have successfuly answered the question correctly.
+
+![Footer](/assets/images/incorrect-answer.png)
 
 ### Features Left to Implement
 - Content access, so once the user has submitted their details, they would be presented with a welcome email, which will provide a link to another page which is similar in appearance to the Main page. <br>

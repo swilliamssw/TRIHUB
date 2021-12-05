@@ -102,12 +102,12 @@ This external link will require them to log in with the details they have provid
    - From the source section drop-down menu, select the Master Branch
    - Once the master branch has been selected, the page provided the link to the completed website.
 
-The live link can be found here - https://swilliamssw.github.io/HOMEVIO/
+The live link can be found here - 
 
 ## Credits<hr>
 
 ### Content
-- The code to make the social media icon links was take from [Social links](https://www.w3schools.com/howto/howto_css_social_media_buttons.asp)
+- The code to make the social media icon links was taken from [Social links](https://www.w3schools.com/howto/howto_css_social_media_buttons.asp)
 
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
@@ -115,7 +115,10 @@ The live link can be found here - https://swilliamssw.github.io/HOMEVIO/
 
 - The instruction for horizonitally aligning my images and text was from [W3C How TO](https://www.w3schools.com/howto/howto_css_images_side_by_side.asp)
 
-- All instructions on how to positon and change things astetically were all taken from [W3C School Tutorials](https://www.w3schools.com/css/default.asp) 
+- The pop up alerts which indicate the player of getting the answer correct or incorrect were taken from [SweetAlerts2](https://sweetalert2.github.io/)
+
+- All instructions on how to positon and change things astetically were all taken from [W3C School Tutorials](https://www.w3schools.com/css/default.asp)
+
 - Main break down of how to approuch this project structure wise were taken form [YouTube](https://www.youtube.com/watch?v=f4fB9Xg2JEY&ab_channel=BrianDesign)
 
 ### Media

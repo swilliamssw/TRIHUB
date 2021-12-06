@@ -1,3 +1,5 @@
+/*jshint sub:true*/
+/*jshint esversion: 6 */
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const progressText = document.getElementById("progressText");

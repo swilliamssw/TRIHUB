@@ -6,7 +6,7 @@ const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const game = document.getElementById("game");
-const startBtn = document.getElementById("startBtn");
+const startBtn = document.getElementById("start-btn");
 const homeView = document.getElementById("home");
 const endGame = document.getElementById("endGame");
 const newGame = document.getElementById('restartGame');
@@ -191,7 +191,7 @@ let allQuestions = [];
  *START OF GAME
  */
 function startGame() {
-    questionCounter = 0;
+    questionCounter = -1;
     score = 0;
     allQuestions = [...questionM];
     getAQuestion();
